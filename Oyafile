@@ -1,0 +1,10 @@
+Project: project
+
+build: |
+  go build .
+
+start: |
+  go run . --port ${Oya[port]} --host ${Oya[host]}
+
+generate: |
+  oya render ${Oya[BasePath]}/templates/app.go
